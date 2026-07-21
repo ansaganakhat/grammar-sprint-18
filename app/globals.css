@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 214 88% 52%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 151 42% 92%;
+    --secondary-foreground: 155 55% 22%;
+    --muted: 214 32% 93%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 214 35% 92%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 214 88% 52%;
+    --radius: 0.9rem;
+  }
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 96%;
+    --card: 222 42% 11%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 42% 11%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 213 94% 66%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 154 35% 18%;
+    --secondary-foreground: 148 55% 84%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 96%;
+    --destructive: 0 63% 42%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 213 94% 66%;
+  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground antialiased; }
+  button, a, input, select, textarea { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background; }
+}
+
+@layer components {
+  .page-title { @apply text-2xl font-bold tracking-tight sm:text-3xl; }
+  .page-subtitle { @apply mt-2 max-w-3xl text-sm text-muted-foreground sm:text-base; }
+  .formula { @apply overflow-x-auto rounded-xl bg-slate-950 px-4 py-3 font-mono text-sm font-semibold text-emerald-300 dark:bg-black/50; }
+  .section-grid { @apply grid gap-4 sm:grid-cols-2 xl:grid-cols-4; }
+}
